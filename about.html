@@ -57,6 +57,9 @@
         </div>
       </div>
     </nav>
+    <div class="alert alert-success" role="alert" id="alert" style="height: 58px;">
+      Welcome
+    </div>
     <div class="container px-3 py-2">
       <h1 class="my-3">About Us</h1>
       <div class="accordion" id="accordionExample">
@@ -165,6 +168,8 @@
   ></script>
 
   <script>
+
+// targetting elements and declaring variables
     let navbar = document.getElementById("navbar");
     let accordion1 = document.getElementById("accordion1");
     let accordion2 = document.getElementById("accordion2");
@@ -173,8 +178,14 @@
     let headingTwo = document.getElementById("headingTwo");
     let headingThree = document.getElementById("headingThree");
     let card = document.getElementById("card");
+    let myAlert = document.getElementById("alert")
     var mode = "light";
 
+    // dismissing alert
+    setTimeout(() => {
+      myAlert.style.visibility="hidden"
+    }, 3000);
+    // dark mode click event
     let darkMode = () => {
       if (mode === "light") {
         accordion1.style.backgroundColor = "#13466e";
@@ -204,9 +215,15 @@
         navbar.classList.remove("bg-light");
         navbar.classList.add("bg-dark");
         navbar.classList.add("navbar-dark");
+        myAlert.style.visibility = ""
+        myAlert.innerHTML="Dark Mode Enabled"
+        setTimeout(() => {
+          myAlert.style.visibility="hidden"
+          
+        }, 3000);
         mode="dark"
       }
-
+      
       else{
         accordion1.style.backgroundColor = "white";
         accordion2.style.backgroundColor = "white";
@@ -236,7 +253,12 @@
         navbar.classList.add("bg-light");
         navbar.classList.add("navbar-light");
         mode="light"
+        myAlert.style.visibility=""
+        myAlert.innerHTML="Light Mode Enabled"
+        setTimeout(() => {
+          myAlert.style.visibility="hidden"
+        }, 3000);
       }
     };
-  </script>
+    </script>
 </html>
