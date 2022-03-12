@@ -8948,13 +8948,13 @@
                         "white"),
                       (document.body.style.backgroundColor = "#042743"),
                       (document.body.style.color = "white"),
-                      d("Dark mode has been enable"),
+                      d("Dark mode has been enabled"),
                       (document.title = "Text Utils - Dark Mode"))
                     : (r("light"),
                       (document.querySelector(".form-check-label").style.color =
                         "black"),
                       (document.body.style.backgroundColor = "white"),
-                      d("Light mode has been enable"),
+                      d("Light mode has been enabled"),
                       (document.body.style.color = "black"));
                 },
                 homeActive: function () {
