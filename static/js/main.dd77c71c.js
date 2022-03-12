@@ -8955,6 +8955,7 @@
                         "black"),
                       (document.body.style.backgroundColor = "white"),
                       d("Light mode has been enabled"),
+                      (document.title =  "Text Utils - Light Mode"),
                       (document.body.style.color = "black"));
                 },
                 homeActive: function () {
